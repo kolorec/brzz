@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Biuro Rachunkowe</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/others.css"/>
+    <link rel="stylesheet" href="../styles/fontello.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+
+</head>
+
+<header>
+    <div id="zodiacDisc">
+        <img id="zodiacSelect" src="../assets/img/circ/zodiac.png" alt="ZODIAK"/>
+    </div>
+    <div id="headTitle">
+        <p id="pageTitle">BIURO RACHUNKOWE</p>
+        <p id="pageName">ŻanetaZiółkowska<span></span></p>
+    </div>
+</header>
+
+<body onload="czasomierz()">
+
+    <marquee id="dateHolder"></marquee>
+
+    <aside id="sidebar">
+        <ul>
+            <li>Pełna Księgowość</li>
+            <li>Zakładanie Działalności</li>
+            <li>Faktury</li> 
+            <li>KPiR</li>
+            <li>Ryczałt</li>
+            <li>Porady Ogólne</li>
+        </ul>
+    </aside>
+
+    <nav>
+        <ul>
+            <li><a href="./_subsites/main.html">Formularz</a></li>
+            <li><a href="./_subsites/cont.html">O mnie</a></li>
+            <li><a href="./_subsites/misc.html">Informacje</a></li>
+        </ul>
+        
+        <main>
+            <form>
+                <div id="servCat">
+                  <label>Usługa:</label>
+                  <select id="type" aria-valuenow="Rodzaj usługi:">
+                    <option value="value1">Częściowa</option>
+                    <option value="value2">Pełna</option>
+                    <option value="value3">Faktury</option>
+                    <option value="value4">Inne</option>
+                  </select>
+                </div>
+                <textarea placeholder="Opis zakresu usług:" maxlength="700" aria-valuetext=""></textarea>
+                <input id="coName" type="text" id="details" placeholder="Nazwa">
+                <input id="taxID" type="number" id="amount" placeholder="NIP / REGON">
+                <div class="buttons">
+                  <INPUT type="submit" value="Wyślij"><INPUT type="reset" value="Wyczyść">
+                </div>
+            </form>
+        </main>
+    </nav>
+
+    <div id="container">
+      <button id="button"><i class="icon-language"></i></button>
+      <a></a>
+      <a href="../_subsites/POL.html"></a>
+      <a href="../_subsites/ENG.html"></a>
+    </div>
+    
+        <footer>
+          oto ja
+        </footer>
+      <script src="../scripts/function.js"></script>
+      <script src="../scripts/lingo.js"></script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+/* :root {
+    --div-zodiac-img: url("../assets/img/circ/zodiac.png")
+} */
+
+@font-face {
+    font-family: "Itakif.ttf";
+    src: url("../assets/font/Itikaf\ FREE.ttf");
+}
+
+@keyframes spinZodiac {
+    0% {transform: rotate(-360deg); opacity: 0.25; scale: 0.5;}
+    /* 50% {opacity : 0.2; transform: rotate(0deg);} */
+    100% {transform: rotate(360deg); opacity: 0.55; scale: 1;}
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;}
+    100% {
+        opacity: 1;}
+    }
+    
+@keyframes fadeOut {
+        0% {
+            opacity: 1;}
+        100% {
+            opacity: 0;}
+        }
+
+@keyframes slideIn {
+    from { transform: scaleX(0); opacity: 0; }
+    to   { transform: scaleX(1); opacity: 1; }
+    }
+       
+@keyframes slideOut {
+    from { width: 60px;}
+    to   { width: auto;}
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: url("../assets/img/skynight.jpg");
+    animation: fadeIn 2s;
+    height: 100vh;
+    max-width: 100vw;
+    min-width: 50vw;
+}
+
+header {
+    width: 100vw;
+    min-width: 50vw;
+    background-image: url("../assets/img/niebo-edited\ flipped2.png");
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.8);
+    border-radius: 10px;
+}
+#zodiacDisc {
+    clip-path: circle(50% at 50% 50%);
+}
+#zodiacDisc img {
+    display: inline-block;
+    clip-path: circle(50% at 50% 50%);
+    /* animation: spinZodiac 2.05s cubic-bezier(.78,1.1,.67,.95); */
+    /* animation: spinZodiac2 0.9s linear 1 0.9s; */
+    min-height: 150px;
+    min-width: 150px;
+    max-width: 300px;
+    max-height: 300px;
+    position: relative;
+    z-index: 3;
+    border-radius: 50%;
+    opacity: 0.6;
+    transform-origin: 50% 50%;
+    /* transform:  rotate(15deg); */
+    display: block;
+}
+
+.zodiacTilt {
+    transform: rotate(tiltAngle);
+}
+
+#headTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    background-blend-mode: luminosity;
+    /* animation: slideIn 2.05s ease-in; */
+}
+
+#pageTitle {
+    font-family: "itakif.ttf";
+    display: flex;
+    color: mistyrose;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-right: 36vw;
+    margin-bottom: 0;
+    font-size: 2.8rem;
+    text-decoration-line: underline;
+    text-justify: kashida;
+}
+
+#pageName {
+    margin: 0;
+    font-family: "itakif.ttf";
+    font: italic 2.3rem  sans-serif;
+    /* letter-spacing: lpx; */
+    justify-self: stretch;
+    text-align: justify;
+    letter-spacing: 6px;
+    color: mintcream;
+    margin-right: 36vw;
+}
+
+#contactList {
+    list-style: none;
+    text-align: justify;
+    justify-content: space-between;
+    align-content: center;
+}
+
+span {
+    opacity: 0;
+    width:100%;
+    height:1px;
+    display:inline-block;
+}
+
+/* //sidebar sidebar SIDEBAR sidebar ***********************************************/
+aside
+{
+    color: whitesmoke;
+    display: inline-flex;
+    width: fit-content;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 1VH 1.5vw 1vh 1.5vw;
+    background-color:  rgb(67, 69, 114);
+    text-align: justify; 
+    transform: translateX(-10%);
+    margin-left: 12.5%;
+    margin-bottom: 0;
+    margin-top: 0;
+    border: 0.3em solid #948485;
+}
+
+aside > ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+aside > ul > li {
+    padding: 5%;
+    justify-content: center;
+    width: fit-content;
+}
+
+aside > ul :last-child {
+    padding-bottom: 0;
+}
+
+
+nav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 60vw;
+    max-height: 36vh;
+}
+
+nav > ul {
+    width: 100%;
+    height: 8vh;
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    justify-items: stretch;
+    border-left: 0.3em solid #948485;
+    border-right: 0.3em solid #948485;
+    border-top: 0.3em solid #948485;
+    background-color: rgb(67, 69, 114);
+}
+
+nav > ul > div {
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    color: mintcream;
+    padding: 2.7%;
+    width: 33.3%;
+    height: 100%;
+}
+
+nav > ul > div:hover {
+    background-color: rgb(30, 30, 115);
+}
+Nav > ul:nth-child(2) {
+    border-right: 1px solid blanchedalmond;
+    border-left: 1px solid rgb(156, 152, 146);
+}
+
+/* nav > ul > li > a {
+    color: mistyrose;
+    text-decoration: none;
+} */
+
+section {
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    min-height: 20vh;
+    max-height: 30vh;
+    /* max-width: 100%; */
+    background-color: #0c0032;
+    background-image: url("../assets/img/niebo-edited\ flippedmain.png");
+    color: mistyrose;
+    border-left: 0.3em solid #948485;
+    border-right: 0.3em solid #948485;
+}
+
+#sec2, #sec3 {
+    display: none;
+}
+
+#sec1 > li {
+    text-align: justify;
+    list-style: none;
+    justify-content: center;
+}
+
+
+form {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 50% 50%;
+    /* grid-gap: 1rem; */
+    padding: 0 1.5% 0 1.5%;
+    /* justify-content: space-between; */
+    max-height: inherit;
+}
+
+input, select, textarea {
+    max-inline-size: 90%;
+    background-color: mistyrose;
+    place-self: center;
+}
+
+#servCat {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    place-self: center;
+}
+
+/* label {justify-self: end;} */
+#coName {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    place-self: center;
+}
+
+#taxID {
+    grid-row: 3 / 3;
+    grid-column: 2 / 2;
+    place-self: center;
+}
+
+textarea {
+    width: 100%;
+    /* height: fit-content; */
+    max-height: 70%;
+    height: inherit;
+    grid-row: 2 / 6;
+    grid-column: 1 / 1;
+    overflow-y: hidden;
+    /* padding: 0.5%; */
+    /* margin: 1.5% 0 1% 1.5%; */
+        writing-mode: horizontal-tb;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        appearance: textarea;
+        
+}
+
+.buttons {
+    grid-column: 2 / 2;
+    grid-row: 4 / 4;
+    place-self: center;
+    place-self: center;
+    border: none;
+    outline: none;
+}
+
+header, aside, ul, section {
+    border-radius: 10px;
+}
+
+aside, nav {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+}
+footer, #dateHolder  {
+    overflow: hidden;
+    z-index: 1;
+    /* margin: 0; */
+    width: 100vw;
+    height: 25;
+    margin: 0 auto;
+    padding: 10px 0 10px 0;
+    display: flex;
+    color: ivory;
+    background-color: rgb(8, 8, 29);
+    font-weight: 600;
+    outline-color: red;
+    outline-width: 2px;
+}
+
+div > button {
+    display: flex;
+    margin: 0 0 1% 1%;
+    background-color: #394453;
+    color: #76879a;
+    height: 45px;
+    width: 45px;
+    position: relative;
+    z-index: 5;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+button:hover, .buttonClicked {
+    cursor: crosshair;
+    color: #394453;
+    background-color: #76879a;
+}
+
+div > a {
+    margin: 0 0 1% 1%;
+    height: 45px;
+    width: 45px;
+    position: relative;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#container :nth-child(2) {
+    background-image: url("../assets/img/flags/ESP.svg");
+    z-index: 4;
+}
+
+#container :nth-child(3) {
+    background-image: url("../assets/img/flags/POL.svg");
+    z-index: 3;
+}
+
+#container :nth-child(4) {
+    background-image: url("../assets/img/flags/UK.svg");
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    animation: fadeIn 0.45s reverse;
+}
+
+.sec2active {
+    display: flex;
+    justify-content: center;
+}
+.sec3active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding-right: 1.5%;
+    color: mistyrose;
+}
+
+section > ul {
+    text-align: justify;
+}
+
+section > p {
+    width: 100%;
+    text-align: right;
+}
+
+section > p > a {
+    text-decoration: none;
+}
+
+.links {
+    text-decoration-color: mistyrose;
+    color: mistyrose;
+    font-size: 1.2em;
+}

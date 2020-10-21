@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Accountancy Bureau</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/others.css"/>
+    <link rel="stylesheet" href="../styles/fontello.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<header>
+    <div id="zodiacDisc">
+        <img id="zodiacSelect" src="../assets/img/circ/zodiac.png" alt="ZODIAK"/>
+    </div>
+    <div id="headTitle">
+        <p id="pageTitle">BIURO RACHUNKOWE</p>
+        <p id="pageName">Żaneta Ziółkowska<span></span></p>
+    </div>
+</header>
+
+<body onload="czasomierz()">
+
+    <marquee id="dateHolder"></marquee>
+
+    <aside>
+        <ul>
+          <li>Full Bookkeeping</li>
+          <li>Start-ups</li>
+          <li>Invoices</li> 
+          <li>KP&R</li>
+          <li>Flat Rates</li>
+          <li>Advising</li>
+        </ul>
+    </aside>
+
+    <nav>
+        <ul>
+            <div id="nav1" onmouseover="sectionSwap1()">Request Form</div>
+            <div id="nav2" onmouseover="sectionSwap2()">Contact</div>
+            <div id="nav3" onmouseover="sectionSwap3()">Disclaimer</div>
+        </ul>
+        
+        <section id="sec1">
+            <form>
+                <div id="servCat">
+                  <label>Seervice Choice:</label>
+                  <select id="type" aria-valuenow="Rodzaj usługi:">
+                    <option value="" selected disabled hidden></option>
+                    <option value="value1">Partial</option>
+                    <option value="value2">Full</option>
+                    <option value="value3">Invoices only</option>
+                    <option value="value4">Other</option>
+                  </select>
+                </div>
+                <textarea placeholder="Services requested:" rows="16" maxlength="300" aria-valuetext="" ></textarea>
+                <input id="coName" type="text" id="details" placeholder="Name">
+                <input id="taxID" type="number" id="amount" placeholder="Tax Identifier">
+                <div class="buttons">
+                  <INPUT type="submit" value="Submit"><INPUT type="reset" value="Clear">
+                </div>
+            </form>
+        </section>
+
+        <section id="sec2">
+          <ul id="contactList">
+            <li>ACCOUNTING / CONSULTING</li><br>
+            <!-- <li>NIP: 7761665728  |  REGON: 385840233</li> btn-fill btn-blue sanbg -->
+            <li>
+                <address>
+                    Email: <a class="links" href="mailto:biuro@zanetaziolkowska.pl">biuro@zanetaziolkowska.pl</a><br>
+                    <br>
+                    ul. Władysława Broniewskiego 17<br>
+                    09-200, Sierpc<br>
+                    Poland<br><br>
+                    <a class="links" href="https://www.zanetaziolkowska.pl">www.zanetaziolkowska.pl</a><br>
+                    Phone: +48516723238
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i> <a class="links" href="https://api.whatsapp.com/send?phone=48516723238&amp;text=Message">Wyślij Wiadomość</a>
+                </address>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sec3">
+          <p> = > Icons made by <a class="links" href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a class="links" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+          <p> = > Zodiac sing graphics source: <a class="links" href ="https://www.lunaf.com/astrology">LUNAF</a></p>
+          <p> = > Translation by: M.J.Smolls</p>
+          <p> = > Programmed with Visual Studio Code</p>
+          <p></p>
+        </section>
+    </nav>
+
+    <div id="container">
+      <button id="button"><i class="icon-language"></i></button>
+      <a class="flag" href="../_subsites/SPA.html"></a>
+      <a class="flag" href="../_subsites/POL.html"></a>
+      <a class="flag"></a>
+    </div>
+    
+        <footer>
+          Copyright &copy; 2020 All rights reserved
+        </footer>
+      <script src="../scripts/funcEng.js"></script>
+      <script src="../scripts/lingo.js"></script>
+      <script src="../scripts/content.js"></script>
+</body>
+</html>
